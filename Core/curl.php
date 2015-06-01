@@ -12,7 +12,7 @@ class curl
      private $errors;
      private $errors_count;
 
-     public function __construct($url){
+     public function init($url){
           $this->handle = curl_init($url);
      }
 
@@ -29,19 +29,20 @@ class curl
 
      public function run(){
           foreach($this->options as $option => $value) {
-               curl_setopt($handle, $option, $value);
+               curl_setopt($this->handle, $option, $value);
           }
           $this->page = curl_exec($this->handle);
           if(($this->errors_count = curl_errno($this->handle)) > 0) {
                $this->errors = curl_error($this->handle);
           }
           curl_close($this->handle);
+          return $this->page;
      }
 
      public function retrieve_errors(){
           return array(
-               'count' => $this->errors_count;
-               'errors' => $this->errors;
+               'count' => $this->errors_count,
+               'errors' => $this->errors
           );
      }
 }

@@ -13,7 +13,7 @@ class xpath
      private $return_types;
      private $output_buffer;
 
-     public function __construct($html){
+     public function load($html){
           libxml_use_internal_errors(true);
           $DOM = new DOMDocument;
           if(!$DOM->loadHTML($html)) {
@@ -43,7 +43,7 @@ class xpath
      }
      public function run(){
           foreach($this->query_map as $name => $query){
-               $this->output_buffer[$name] = organize($this->xpath->query($query), $this->return_types[$name]);
+               $this->output_buffer[$name] = $this->organize($this->xpath->query($query), $this->return_types[$name]);
           }
           return $this->output_buffer;
      }
