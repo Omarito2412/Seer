@@ -12,11 +12,11 @@ class curl
      private $errors;
      private $errors_count;
 
-     public curl($url){
+     public function __construct($url){
           $this->handle = curl_init($url);
      }
 
-     public add_option($key, $value = null){
+     public function add_option($key, $value = null){
           if($value == null) {      // Options are supplied through an array
                foreach($key as $option => $value){
                     $this->options[$option] = $value;

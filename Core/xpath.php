@@ -13,7 +13,7 @@ class xpath
      private $return_types;
      private $output_buffer;
 
-     public function xpath($html){
+     public function __construct($html){
           libxml_use_internal_errors(true);
           $DOM = new DOMDocument;
           if(!$DOM->loadHTML($html)) {
