@@ -83,7 +83,7 @@ class Output
         }
         return $output;
     }
-    privat function list_to_string($list)
+    private function list_to_string($list)
     {
         $string = array();
         foreach($list as $item){
