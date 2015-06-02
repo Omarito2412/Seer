@@ -1,11 +1,29 @@
 <?php
-/*
-*    Responsibilites:
-*         Build DOMXpath object
-*         Assign/Execute queries
-*         Clean and organize outputs based on filters
-*/
-class xpath
+/**
+ * Seer, 
+ *
+ * A PHP XPath based web scraping framework.
+ *
+ * PHP support 5.3+
+ *
+ * @package     Seer
+ * @version     0.0.0
+ * @author      Omarito2412
+ * @link        https://github.com/Omarito2412/Seer
+ * @license     MIT
+ */
+namespace Seer;
+
+use \DOMXpath, 
+    \DOMDocument; 
+/**
+ * Responsibilites:
+ *    Build DOMXpath object
+ *    Assign/Execute queries
+ *    Clean and organize outputs based on filters
+ */
+
+class Xpath
 {
      private $errors;
      private $xpath;
