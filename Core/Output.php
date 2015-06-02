@@ -31,24 +31,31 @@ class Output
             );
 
         $this->info[$name] = array(
-            'separator' => $separator
+            'separator' => $separator,
+            'list-separator' => '|'
         );
     }
-
-    public function csv_push($name, $entry)
+    public function csv_add_opt($name, $value){
+            // Add an option to this file from the specified options in the documentation
+        $this->info[$name] = $value;
+    }
+    public function csv_push($file_name, $entry)
     {       //$entry = array('col1' => val1, 'col2' => val2); CSV Columns of 1 row
-        if (get_class($entry) == "DOMNodeList")
-            $entry = $this->to_array($entry);
-        $this->input[$name][] = implode($this->info[$name]['separator'], $entry);
+        $row = array();
+        foreach($entry as $column){
+            if(is_object($column) && get_class($column) == "DOMNodeList")
+                $column = $this->list_to_string($column);
+            else if(is_array($column))
+                $column = implode($this->info['list-separator'], $column);
+            $row[] = $column;
+        }
+        $this->input[$file_name][] = implode($this->info[$file_name]['separator'], $row);
     }
 
-    public function csv_push_all($name, $lines_array)
+    public function csv_push_all($file_name, $rows_array)
     {  //$lines_array = array(array('col1' => val1), array('col1'=> val1)); CSV Rows
-        foreach ($lines_array as $entry) {
-            if (is_array($entry))
-                $this->input[$name][] = implode($this->info[$name]['separator'], $entry);
-            else
-                $this->input[$name][] = $entry;
+        foreach ($rows_array as $row) {
+            $this->csv_push($file_name, $row)
         }
     }
 
@@ -75,5 +82,14 @@ class Output
             $output[] = $Node->nodeValue;
         }
         return $output;
+    }
+    privat function list_to_string($list)
+    {
+        $string = array();
+        foreach($list as $item){
+            $string[] = $item->nodeValue;
+        }
+        $string = implode($this->info["list-separator"], $string);
+        return $string;
     }
 }
