@@ -9,12 +9,12 @@ Using git
 ```bash
 $ git clone https://github.com/Omarito2412/Seer.git
 ```
-Or download it manually 
+Or download it manually
 
 
 Usage
 -----
-Simply require `seer.php` and start your query. 
+Simply require `Seer.php` and start your query.
 
 
 ````php
@@ -43,6 +43,6 @@ $scraper->output->csv_push_all('output.csv', $output);
 $scraper->output->csv_create('output.csv');
 ````
 
-LICENSE 
+LICENSE
 -----
 MIT
