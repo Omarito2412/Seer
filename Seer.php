@@ -20,9 +20,7 @@ namespace Seer;
  */
 define('CORE_LOCATION', "./Core/");
 
-require_once CORE_LOCATION . 'curl.php';
-require_once CORE_LOCATION . 'xpath.php';
-require_once CORE_LOCATION . 'output.php';
+require_once __DIR__.'/vendor/autoload.php';
 
 class Seer
 {
@@ -32,8 +30,8 @@ class Seer
 
     public function __construct()
     {
-        $this->xpath = new xpath();
-        $this->curl = new curl();
-        $this->output = new output();
+        $this->xpath = new Core\Xpath();
+        $this->curl = new Core\Curl();
+        $this->output = new Core\Output();
     }
 }
