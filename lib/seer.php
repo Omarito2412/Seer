@@ -18,20 +18,16 @@ namespace Seer;
  * Responsibilites:
  *   This is the loader class, Communication occurs only through it.
  */
-define('CORE_LOCATION', "./Core/");
-
-require_once __DIR__.'/vendor/autoload.php';
-
 class Seer
 {
     public $xpath;
     public $curl;
     public $output;
 
-    public function __construct()
+    public function __construct(Core\Xpath $xpath, Core\Curl $curl, Core\Output $output)
     {
-        $this->xpath = new Core\Xpath();
-        $this->curl = new Core\Curl();
-        $this->output = new Core\Output();
+        $this->xpath  = $xpath;
+        $this->curl   = $curl;
+        $this->output = $output;
     }
 }
