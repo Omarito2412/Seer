@@ -1,9 +1,24 @@
 <?php
-/*
-*    Responsibilites:
-*         Build output files using input and specified file type
-*/
-class output{
+/**
+ * Seer, 
+ *
+ * A PHP XPath based web scraping framework.
+ *
+ * PHP support 5.3+
+ *
+ * @package     Seer
+ * @version     0.0.0
+ * @author      Omarito2412
+ * @link        https://github.com/Omarito2412/Seer
+ * @license     MIT
+ */
+namespace Seer;
+
+/**
+ * Responsibilites:
+ *   Build output files using input and specified file type
+ */
+class Output{
      private $input;
      private $info;
 
