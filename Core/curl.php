@@ -1,10 +1,25 @@
 <?php
-/*
-*    Responsibilites:
-*         Connects to website and grabs documents
-*         Organize options and header types, Also request types and data
-*/
-class curl
+/**
+ * Seer, 
+ *
+ * A PHP XPath based web scraping framework.
+ *
+ * PHP support 5.3+
+ *
+ * @package     Seer
+ * @version     0.0.0
+ * @author      Omarito2412
+ * @link        https://github.com/Omarito2412/Seer
+ * @license     MIT
+ */
+namespace Seer;
+
+/**
+ * Responsibilites:
+ *   Connects to website and grabs documents
+ *   Organize options and header types, Also request types and data
+ */
+class Curl
 {
      private $handle;
      private $options;
