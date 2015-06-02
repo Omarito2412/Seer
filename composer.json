@@ -1,5 +1,5 @@
 {
-    "name": "Seer/Seer",
+    "name": "seer/seer",
     "type": "project",
     "description": "A PHP XPath based web scraping framework",
     "keywords": ["web","scrape", "framework", "xpath", "curl"],
