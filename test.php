@@ -3,13 +3,13 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Seer\Seer; 
-use Seer\Core\Output; 
-use Seer\Core\Curl;
-use Seer\Core\Xpath;
+use Seer\lib\Seer;
+use Seer\lib\Core\Output;
+use Seer\lib\Core\Curl;
+use Seer\lib\Core\Xpath;
 
 
-$xpath = new Xpath; 
+$xpath = new Xpath;
 $curl = new Curl;
 $output = new Output;
 

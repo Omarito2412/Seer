@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Seer\\' => array($baseDir . '/lib'),
+    'Seer\\lib\\Core\\' => array($baseDir . '/lib/Core'),
+    'Seer\\lib\\' => array($baseDir . '/lib'),
 );

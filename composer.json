@@ -18,7 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Seer\\Core\\" : "Core/"
+            "Seer\\lib\\Core\\" : "lib/Core/",
+            "Seer\\lib\\" : "lib/"
        }
      }
 }

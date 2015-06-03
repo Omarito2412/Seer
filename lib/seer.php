@@ -12,7 +12,7 @@
  * @link        https://github.com/Omarito2412/Seer
  * @license     MIT
  */
-namespace Seer;
+namespace Seer\lib;
 
 /**
  * Responsibilites:
