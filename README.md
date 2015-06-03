@@ -23,7 +23,18 @@ Simply require `Seer.php` and start your query.
 require_once 'Seer.php';
 
 
-$scraper = new Seer\Seer();
+use Seer\lib\Seer;
+use Seer\lib\Core\Output;
+use Seer\lib\Core\Curl;
+use Seer\lib\Core\Xpath;
+
+
+$xpath = new Xpath;
+$curl = new Curl;
+$output = new Output;
+
+$scraper = new Seer($xpath, $curl, $output);
+
 $scraper->curl->init('https://github.com/Omarito2412/Seer');
 $scraper->curl->add_option(array(
      CURLOPT_RETURNTRANSFER => true,
