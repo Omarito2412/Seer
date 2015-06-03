@@ -55,7 +55,7 @@ class Output
     public function csv_push_all($file_name, $rows_array)
     {  //$lines_array = array(array('col1' => val1), array('col1'=> val1)); CSV Rows
         foreach ($rows_array as $row) {
-            $this->csv_push($file_name, $row)
+            $this->csv_push($file_name, $row);
         }
     }
 
@@ -83,7 +83,7 @@ class Output
         }
         return $output;
     }
-    privat function list_to_string($list)
+    private function list_to_string($list)
     {
         $string = array();
         foreach($list as $item){
