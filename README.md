@@ -5,10 +5,21 @@ A PHP XPath based web scraping framework.
 Install
 -----
 
-Using git
+Using Git
 ```bash
 $ git clone https://github.com/Omarito2412/Seer.git
 ```
+
+Using Composer
+```json
+{
+     "require":{
+          "seer/seer" : "dev-master"
+     }
+
+}
+```
+
 Or download it manually
 
 
