@@ -3,10 +3,10 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Seer\lib\Seer;
-use Seer\lib\Core\Output;
-use Seer\lib\Core\Curl;
-use Seer\lib\Core\Xpath;
+use Seer\Seer;
+use Seer\Core\Output;
+use Seer\Core\Curl;
+use Seer\Core\Xpath;
 
 
 $xpath = new Xpath;

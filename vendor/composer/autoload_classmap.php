@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Seer\\lib\\Core\\Curl' => $baseDir . '/lib/core/curl.php',
-    'Seer\\lib\\Core\\Output' => $baseDir . '/lib/core/output.php',
-    'Seer\\lib\\Core\\Xpath' => $baseDir . '/lib/core/xpath.php',
-    'Seer\\lib\\Seer' => $baseDir . '/lib/seer.php',
+    'Seer\\Core\\Curl' => $baseDir . '/lib/core/curl.php',
+    'Seer\\Core\\Output' => $baseDir . '/lib/core/output.php',
+    'Seer\\Core\\Xpath' => $baseDir . '/lib/core/xpath.php',
+    'Seer\\Seer' => $baseDir . '/lib/seer.php',
 );
