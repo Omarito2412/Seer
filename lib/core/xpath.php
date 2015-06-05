@@ -14,8 +14,7 @@
  */
 namespace Seer\Core;
 
-use \DOMXpath,
-    \DOMDocument;
+
 
 /**
  * Responsibilities:
@@ -34,12 +33,12 @@ class Xpath
     public function load($html)
     {
         libxml_use_internal_errors(true);
-        $DOM = new DOMDocument;
+        $DOM = new \DOMDocument;
         if (!$DOM->loadHTML($html)) {
             $this->errors = libxml_get_errors();
             libxml_clear_errors();
         }
-        $this->xpath = new DOMXPath($DOM);
+        $this->xpath = new \DOMXPath($DOM);
     }
 
     public function get_errors()
@@ -76,5 +75,6 @@ class Xpath
     {
         if ($type == "LIST")
             return $xpath_result;
+        //TODO: Handle more types
     }
 }

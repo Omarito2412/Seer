@@ -26,8 +26,8 @@ class Seer
 
     public function __construct(Core\Xpath $xpath, Core\Curl $curl, Core\Output $output)
     {
-        $this->xpath  = $xpath;
-        $this->curl   = $curl;
+        $this->xpath = $xpath;
+        $this->curl = $curl;
         $this->output = $output;
     }
 }
