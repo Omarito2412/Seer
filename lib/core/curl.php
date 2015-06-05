@@ -18,7 +18,11 @@ namespace Seer\Core;
  * Responsibilities:
  *   Connects to website and grabs documents
  *   Organize options and header types, Also request types and data
+ *
+ * TODO: Init loads default options
+ * TODO: Init takes an Array and returns an array of Strings (Pages)
  */
+
 class Curl
 {
     private $handle;
