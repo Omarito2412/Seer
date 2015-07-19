@@ -34,9 +34,10 @@ class Curl
     public function init($url)
     {
         $this->handle = curl_init($url);
+        $this->addOption(CURLOPT_RETURNTRANSFER, true);
     }
 
-    public function add_option($key, $value = null)
+    public function addOption($key, $value = null)
     {
         if ($value == null) {      // Options are supplied through an array
             foreach ($key as $option => $value) {
@@ -60,7 +61,7 @@ class Curl
         return $this->page;
     }
 
-    public function retrieve_errors()
+    public function retrieveErrors()
     {
         return array(
             'count' => $this->errors_count,
